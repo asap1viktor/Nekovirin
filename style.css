@@ -1,0 +1,63 @@
+/*Превьюшка сайта*/
+body {
+    margin:auto;
+}
+
+.start {
+    background-color: rgb(29,29,29);
+    width: 100vw;
+    height: 100vh;
+    display:grid;
+    grid-template-columns: 50% 30%;
+    align-items: center;
+    transition-duration: 2s;
+    position: fixed;
+    z-index: 2;
+    display: none;
+}
+
+.start__solar-system {
+    margin-left:-11vw;
+    width: 115%;
+}
+
+.start__click {
+    box-shadow: 0 0 0.5vw antiquewhite;
+    text-shadow: 0 0 0.5vw antiquewhite;
+    text-align: center;
+    font-size: 1.3vw;
+    padding:1vw;
+    color:antiquewhite;
+    border: 0.20vw solid antiquewhite;
+    border-radius: 1vw;
+    text-decoration: none;
+}
+
+.start__click:hover{
+    opacity: 0.4;
+    transition-duration: 0.2s;
+}
+
+/*Шапка сайта*/
+.menu__list {
+    background-color:rgb(29,29,29);
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    justify-items: center;
+    align-items:center;
+    font-size: 2vw;
+    height: 5vw;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    color:antiquewhite;
+    border: 1px solid rgb(255, 48, 48);
+}
+
+.menu__item ol {
+    position:absolute;
+}
+
+.menu__item {
+    text-align: center;
+}
