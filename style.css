@@ -92,3 +92,8 @@ body {
 .menu__item:nth-child(2):hover ol {
     display:block;
 }
+
+ol li{
+    text-shadow: 0 0 1vw antiquewhite;
+    color:antiquewhite;
+}
