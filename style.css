@@ -1,6 +1,7 @@
 /*Превьюшка сайта*/
 body {
     margin:auto;
+    overflow: hidden;
 }
 
 .start {
@@ -13,7 +14,6 @@ body {
     transition-duration: 2s;
     position: fixed;
     z-index: 2;
-
 }
 
 .start__solar-system {
@@ -38,26 +38,66 @@ body {
     transition-duration: 0.2s;
 }
 
-/*Шапка сайта*/
-.menu__list {
-    background-color:rgb(29,29,29);
-    display: grid;
-    grid-template-columns: repeat(5, auto);
-    justify-items: center;
-    align-items:center;
-    font-size: 2vw;
-    height: 5vw;
+/*Щапка сайта*/
+.video-header {
     width: 100%;
+}
+
+/*Меню навигации*/
+.menu {
+    margin-top: 3vw;
+    width: 100vw;
+    height: 5vw;
     position: fixed;
-    z-index: 1;
-    color:antiquewhite;
-    border: 1px solid rgb(255, 48, 48);
+    z-index:1;
+    display: grid;
+}
+
+.menu__list {
+    align-self: center;
+    font-size: 2vw;
+    text-align: center;
+    padding: 0;
+    display: grid;
+    margin: auto;
+    width: 80vw;
+    grid-template-columns: repeat(5, auto);
 }
 
 .menu__item ol {
     position:absolute;
+    display: none;
+    color: antiquewhite;
+    list-style-type:upper-roman ;
+    padding-top: 0.5vw;
+    margin-left: 0.8vw;
+    font-size: 1.7vw;
 }
 
 .menu__item {
-    text-align: center;
+    list-style-type: none;
+}
+
+.menu__item a{
+    text-shadow: 0 0 1vw antiquewhite;
+    text-decoration: none;
+    color:antiquewhite;
+}
+
+.menu__item a:hover{
+    opacity: 0.4;
+    transition-duration: 0.2s;
+}
+
+.menu__item:nth-child(2):hover ol {
+    display:block;
+}
+
+ol li {
+    text-shadow: 0 0 1vw antiquewhite;
+    color:antiquewhite;
+}
+
+ol li:hover {
+    opacity:
 }

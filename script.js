@@ -6,5 +6,5 @@ const start = document.querySelector(".start"),
 
 startClick.addEventListener ('click', () => {
     start.style.marginTop = "-100vh";
-    start.style.overflow = "hidden";
+    document.body.style.overflow = "visible";
 });
