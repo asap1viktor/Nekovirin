@@ -15,22 +15,59 @@ startClick.addEventListener ('click', () => {
 
 //Интерактив слайдера.
 //Инициализация элементов страницы.
-const slider = document.querySelector(".slider"),
-      sliderWrapper = slider.querySelector(".slider__wrapper"),
-      sliderContent = sliderWrapper.querySelector(".slider__content"),
-      arrowLeft = slider.querySelector(".arrow-left"),
-      arrowRight = slider.querySelector(".arrow-right"),
-      firstSlide = sliderContent.firstElementChild.cloneNode(true),
-      lastSlide = sliderContent.lastElementChild.cloneNode(true);
-
+let slider = document.querySelector(".slider"),
+    sliderWrapper = slider.querySelector(".slider__wrapper"),
+    sliderContent = sliderWrapper.querySelector(".slider__content"),
+    arrowLeft = slider.querySelector(".arrow-left"),
+    arrowRight = slider.querySelector(".arrow-right"),
+    cloneFirst = sliderContent.firstElementChild.cloneNode(true),
+    cloneLast = sliderContent.lastElementChild.cloneNode(true),
+    items = sliderContent.querySelectorAll(".slider__item"),
+    index = 1;
 //Добавляем первый слайд в конце слайдера, а последний в начало.
-sliderContent.append(firstSlide);
-sliderContent.prepend(lastSlide);
-
-console.log(sliderContent);
-
+sliderContent.append(cloneFirst);
+sliderContent.prepend(cloneLast);
 //Рендерим страницу на основании новых элементов.
 sliderContent.style.gridTemplateColumns = 'repeat(10, auto)';
-
+//Функция сдвига слайдера
+function dragSlider(i,callback) {
+    console.log(index);
+    sliderContent.style.transition = "1s";
+    sliderContent.style.marginLeft = -i * 56 + "vw";
+    callback(i);
+}
+//Функция условия index
+function conditionSlider (i) {
+    if(i < 1) {
+        sliderContent.addEventListener('transitionend', () => {
+            index = 8;
+            i = 8;
+            sliderContent.style.transition = "none";
+            sliderContent.style.marginLeft = -i * 56 + "vw";
+        }, {once: true});
+    } else if(i > 8) {
+        sliderContent.addEventListener('transitionend', () => {
+            index = 1;
+            i = 1;
+            sliderContent.style.transition = "none";
+            sliderContent.style.marginLeft = -i * 56 + "vw";
+        }, {once: true});
+    } else {}
+}
+//Функция слайдера
+function eventSlider () {
+    //При клике на правую кнопку
+    arrowLeft.addEventListener('click', () => {
+        index--;
+        dragSlider(index,conditionSlider);
+    });
+    //При клике на левую кнопку
+    arrowRight.addEventListener('click', () => {
+        index++;
+        dragSlider(index,conditionSlider);
+    });
+}
+//Функция события когда доходим до конца
+eventSlider();
 });
 

@@ -14,7 +14,7 @@ body {
     transition-duration: 2s;
     position: fixed;
     z-index: 4;
-    display:none;
+
 }
 
 .start__solar-system {
@@ -126,11 +126,9 @@ header {
     order:2;
     background-color: rgb(37, 123, 199);
     width: 56vw;
-    height:30vw;
+    height:31.5vw;
     overflow: hidden;
-    border:0.3vw antiquewhite solid;
     box-shadow: 0 0 0.5vw antiquewhite;
-    overflow: scroll;
 }
 
 .slider__arrow{
