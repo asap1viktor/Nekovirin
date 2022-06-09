@@ -1,0 +1,19 @@
+.planet {
+    height: 100vh;
+    width: 100vw;
+    background: url("../Photos/sky-stars.jpg");
+    background-size:cover;
+    top:6.8vw;
+    position: relative;
+}
+
+.mercury__shadow {
+    background:white;
+    width: 100vw;
+    box-shadow: 0 0.1vh 4vh 2vh rgb(0, 0, 0),0 -0.1vh 2vh 2vh rgb(0, 0, 0) ;
+}
+
+.planet__inf img {
+    width: 30vw;
+
+}
