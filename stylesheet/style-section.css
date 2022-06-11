@@ -1,13 +1,18 @@
 .planet {
     height: 100vh;
-    width: 100vw;
-    background: url("../Photos/sky-stars.jpg");
+    width: 100%;
+    background: url("../Photos/sky-stars.jpg") no-repeat;
     background-size:cover;
-    top:6.8vw;
-    position: relative;
+    top:55vw;
+    position: absolute;
+    display: grid;
+    align-items:center;
+    justify-items: center;
+    color:aliceblue;
 }
 
-.mercury__shadow {
+.planet__shadow {
+    align-self: start;
     background:white;
     width: 100vw;
     box-shadow: 0 0.1vh 4vh 2vh rgb(0, 0, 0),0 -0.1vh 2vh 2vh rgb(0, 0, 0) ;
@@ -15,5 +20,20 @@
 
 .planet__inf img {
     width: 30vw;
+}
 
+.planet h2 {
+    margin-top: 8vw;
+}
+
+.planet__inf {
+    width: 85vw;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    align-items:center;
+    justify-items: stretch;
+}
+
+.planet__inf p {
+    width: 48vw;
 }

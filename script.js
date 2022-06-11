@@ -10,7 +10,8 @@ const start = document.querySelector(".start"),
 
 startClick.addEventListener ('click', () => {
     start.style.marginTop = "-100vh";
-    document.body.style.overflow = "visible";
+    document.body.style.overflowY = "visible";
+    document.body.style.overflowX = "hidden";
 });
 
 //Интерактив слайдера.
