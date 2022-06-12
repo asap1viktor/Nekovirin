@@ -100,14 +100,12 @@ ol li{
 /*Щапка сайта*/
 .video-header {
     width: 100%;
-    position: relative;
-    margin: 0;
 }
 
 /*Слайдер*/
 header {
     display:grid;
-    height: 100vh;
+    height: 55vw;
 }
 
 .slider {
@@ -117,7 +115,6 @@ header {
     justify-self: center;
     width: 72vw;
     z-index: 2;
-    margin-top: 5vw;
     align-items:center;
     justify-items: center;
     position: absolute;
@@ -129,7 +126,7 @@ header {
     width: 56vw;
     height:31.5vw;
     overflow: hidden;
-    box-shadow: 0 0 0.5vw antiquewhite;
+    box-shadow: 0 0.1vh 4vh 2vh rgb(0, 0, 0),0 -0.1vh 2vh 2vh rgb(0, 0, 0);
 }
 
 .slider__arrow{
@@ -159,6 +156,8 @@ header {
     grid-template-columns: repeat(8,auto);
     margin-left:-56vw;
 }
+
+
 
 .slider__item {
     width:56vw;

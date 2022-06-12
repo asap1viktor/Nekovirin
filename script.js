@@ -23,7 +23,6 @@ let slider = document.querySelector(".slider"),
     arrowRight = slider.querySelector(".arrow-right"),
     cloneFirst = sliderContent.firstElementChild.cloneNode(true),
     cloneLast = sliderContent.lastElementChild.cloneNode(true),
-    items = sliderContent.querySelectorAll(".slider__item"),
     index = 1;
 //Добавляем первый слайд в конце слайдера, а последний в начало.
 sliderContent.append(cloneFirst);
@@ -72,3 +71,12 @@ function eventSlider () {
 eventSlider();
 });
 
+//Функция для событий клика планет
+let sliderItems = document.querySelectorAll(".slider__item"),
+    menuPlanets = document.querySelectorAll(".menu__planet");
+
+    //При клике на одну и планет меню
+    menuPlanets[0].addEventListener('click', () => {
+        console.log(menuPlanets[0]);
+        window.scrollTo(0, 1000);
+    });

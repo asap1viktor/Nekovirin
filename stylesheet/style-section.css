@@ -1,18 +1,19 @@
 .planet {
-    height: 100vh;
+    height: 120vh;
     width: 100%;
     background: url("../Photos/sky-stars.jpg") no-repeat;
     background-size:cover;
-    top:55vw;
-    position: absolute;
     display: grid;
-    align-items:center;
+    align-items:start;
     justify-items: center;
     color:aliceblue;
+    position: relative;
+    z-index: 2;
+
 }
 
 .planet__shadow {
-    align-self: start;
+    align-self:start;
     background:white;
     width: 100vw;
     box-shadow: 0 0.1vh 4vh 2vh rgb(0, 0, 0),0 -0.1vh 2vh 2vh rgb(0, 0, 0) ;
@@ -22,9 +23,6 @@
     width: 30vw;
 }
 
-.planet h2 {
-    margin-top: 8vw;
-}
 
 .planet__inf {
     width: 85vw;
@@ -32,8 +30,22 @@
     grid-template-columns: repeat(2, auto);
     align-items:center;
     justify-items: stretch;
+    background-color: rgba(65, 65, 65, 0.74);
+    padding: 1vw;
+    border-radius:1vw;
 }
+
 
 .planet__inf p {
     width: 48vw;
+    font-size: 1.2vw;
+    text-indent: 2vw;
+}
+
+.planet__wrapper {
+    display: grid;
+}
+
+.planet__inf h2 {
+    justify-self:center;
 }
