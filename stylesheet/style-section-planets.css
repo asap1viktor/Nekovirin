@@ -49,3 +49,18 @@
 .planet__inf h2 {
     justify-self:center;
 }
+
+/**Стилизация таблицы планет**/
+.planet__tabel {
+    background-color: rgba(65, 65, 65, 0.74);
+    padding: 2vw;
+    border-radius:1vw;
+    line-height: 2vw;
+    font-size: 1.5vw;
+    text-align: center;
+}
+
+.planet__tabel td {
+    padding-right:1vw;
+    padding-left: 1vw;
+}

@@ -73,10 +73,43 @@ eventSlider();
 
 //Функция для событий клика планет
 let sliderItems = document.querySelectorAll(".slider__item"),
-    menuPlanets = document.querySelectorAll(".menu__planet");
+    menuPlanets = document.querySelectorAll(".menu__planet"),
+    planet = document.querySelectorAll(".planet"),
+    menuItem = document.querySelectorAll(".menu__item");
 
-    //При клике на одну и планет меню
-    menuPlanets[0].addEventListener('click', () => {
-        console.log(menuPlanets[0]);
-        window.scrollTo(0, 1000);
+
+
+
+menuItem.forEach(function(item, i) {
+    item.addEventListener('click', (event) => {
+        event.preventDefault();
+        console.log(menuItem[i]);
+        window.scrollTo({
+            top: menuItem[i].offsetTop,
+            left: 0,
+            behavior:"smooth"});
     });
+});
+
+menuPlanets.forEach(function(item, i) {
+    item.addEventListener('click', (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        console.log(menuPlanets[i]);
+        window.scrollTo({
+            top: planet[i].offsetTop,
+            left: 0,
+            behavior:"smooth"});
+    });
+});
+
+sliderItems.forEach(function(item, i) {
+    item.addEventListener('click', (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        window.scrollTo({
+            top: planet[i].offsetTop,
+            left: 0,
+            behavior:"smooth"});
+    });
+});
