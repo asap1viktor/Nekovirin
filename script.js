@@ -109,7 +109,7 @@ sliderItems.forEach(function(item, i) {
         event.preventDefault();
         event.stopPropagation();
         window.scrollTo({
-            top: planet[i].offsetTop,
+            top: planet[i-1].offsetTop,
             left: 0,
             behavior:"smooth"});
     });
