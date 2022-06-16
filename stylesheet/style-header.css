@@ -14,7 +14,6 @@ body {
     transition-duration: 2s;
     position: fixed;
     z-index: 4;
-    display: none;
 }
 
 .start__solar-system {
@@ -162,3 +161,8 @@ header {
 .slider__item {
     width:56vw;
 }
+
+main {
+    background-color:rgb(0, 0, 0);
+}
+
