@@ -12,6 +12,7 @@ const start = document.querySelector(".start"),
 startClick.addEventListener ('click', () => {
     audio.innerHTML = "<audio src='audio/Hans-Hujans.mp3' autoplay></audio>";
     start.style.marginTop = "-100vh";
+    start.style.transition = "2s";
     document.body.style.overflowY = "visible";
     document.body.style.overflowX = "hidden";
 });
